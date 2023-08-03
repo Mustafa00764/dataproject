@@ -10,12 +10,13 @@
     android:layout_weight="1"
     android:gravity="bottom"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="315dp"
-        android:background="@drawable/ll_cub"
+        android:layout_height="179dp"
         android:layout_marginLeft="48dp"
         android:layout_marginBottom="40dp"
-        android:layout_height="179dp">
+        android:background="@drawable/ll_cub">
 
     </LinearLayout>
 </LinearLayout>
@@ -24,13 +25,15 @@
         android:layout_weight="1"
         android:gravity="bottom"
         android:layout_height="match_parent">
+
         <Button
-            android:layout_width="297dp"
-            app:backgroundTint="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="58dp"
+            android:layout_marginRight="58dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/buttunn"
-            android:layout_height="45dp"/>
+            app:backgroundTint="@null" />
     </LinearLayout>
 
 </LinearLayout>
