@@ -1,22 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/data4"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_weight="1.67"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1.4">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_2"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/ll_chast"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/thirdpage_layout"
+        android:layout_weight="1">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/thirdpage_layout"
+            android:gravity="center"
+            android:layout_weight="1.2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2E4C56"
+                android:text="Quizzi"
+                android:textSize="36sp"
+                android:textStyle="normal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:paddingHorizontal="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_weight="1.1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2E4C56"
+                android:text="Let's Play    "
+                android:textSize="24sp"
+                android:textStyle="normal"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#93A2A6"
+                android:text="So,there are some questions to answer.When you give your answer to the question,it will be accepted to base and at the end,results will provided."
+                android:textSize="16sp"
+                android:textStyle="normal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingHorizontal="25dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2E4C56"
+                android:text="Name"
+                android:textSize="18sp"
+                android:textStyle="normal"/>
+            <EditText
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/name_edittext_back"
+                android:textColor="#2E4C56"
+                android:textSize="18sp"
+                android:hint="Enter Your Name"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/white">
+            <Button
+
+                android:layout_width="210dp"
+                android:layout_height="50dp"
+                android:background="@drawable/getstart_button"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:backgroundTint="@null"
+                android:text="Play"/>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
