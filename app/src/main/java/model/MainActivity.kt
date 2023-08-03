@@ -1,9 +1,10 @@
-package com.xr.data
+package model
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.xr.data.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private  fun openStartActivity(){
-        val intent = Intent(this,TwoActivity::class.java)
+        val intent = Intent(this, TwoActivity::class.java)
         startActivity(intent)
         finish()
 

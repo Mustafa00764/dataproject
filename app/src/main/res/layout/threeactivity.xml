@@ -77,6 +77,7 @@
                 android:textSize="18sp"
                 android:textStyle="normal"/>
             <EditText
+                android:id="@+id/et_name"
                 android:layout_marginTop="10dp"
                 android:paddingStart="10dp"
                 android:layout_width="match_parent"
@@ -95,7 +96,7 @@
             android:gravity="center"
             android:background="@color/white">
             <Button
-
+                android:id="@+id/b_play"
                 android:layout_width="210dp"
                 android:layout_height="50dp"
                 android:background="@drawable/getstart_button"

@@ -50,6 +50,7 @@
         android:layout_weight="1.2">
 
         <Button
+            android:id="@+id/b_getStart"
             android:layout_marginBottom="50dp"
             android:layout_width="210dp"
             android:layout_height="50dp"

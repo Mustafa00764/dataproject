@@ -6,7 +6,7 @@
     android:gravity="center"
     android:background="@drawable/gridi"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="model.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
