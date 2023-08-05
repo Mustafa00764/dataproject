@@ -50,19 +50,20 @@ class TestActivity : AppCompatActivity() {
 
             if (rbAnswer1.isChecked) {
                 selected = 1
+
             } else if (rbAnswer2.isChecked) {
                 selected = 2
+
             } else if (rbAnswer3.isChecked) {
                 selected = 3
+
             } else if (rbAnswer4.isChecked) {
                 selected = 4
-            }
 
+            }
             if (selected == questions[count].togriJavob) {
                 count++
                 setQuestion(count)
-            } else {
-                Toast.makeText(this, "Javob noto'g'ri", Toast.LENGTH_SHORT).show()
             }
 
 

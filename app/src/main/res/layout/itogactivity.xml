@@ -123,7 +123,6 @@
                     android:id="@+id/ll_n1"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-
                     android:background="@drawable/tttttttttttttttt"
                     android:orientation="horizontal">
                     <TextView
