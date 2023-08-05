@@ -15,13 +15,13 @@ class ThreeActivity: AppCompatActivity() {
 initViews()
     }
     private fun initViews() {
-        val etName = findViewById<EditText>(R.id.et_name)
-        val bPlay = findViewById<Button>(R.id.b_play)
+        var etName = findViewById<EditText>(R.id.et_name)
+        var bPlay = findViewById<Button>(R.id.b_play)
 
         bPlay.setOnClickListener {
             if (etName.text.toString().length >= 3) {
-                val intent = Intent(this, FourActivity::class.java)
-                intent.putExtra("Qummi", etName.text.toString())
+                var intent = Intent(this, TestActivity::class.java)
+                intent.putExtra("name", etName.text.toString())
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Avval ism kiritishingiz kerak", Toast.LENGTH_SHORT).show()

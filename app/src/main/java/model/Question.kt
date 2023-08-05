@@ -2,9 +2,9 @@ package model
 
 class Question(
     val savol:String,
-    val variant1:String,
-    val variant2:String,
-    val variant3:String,
-    val variant4:String,
-    val variant5:String,
+    val javob1:String,
+    val javob2:String,
+    val javob3:String,
+    val javob4:String,
+    var togriJavob:Int
 )

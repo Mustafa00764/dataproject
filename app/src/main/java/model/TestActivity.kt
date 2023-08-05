@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.xr.data.R
 
-class FourActivity : AppCompatActivity()  {
+class TestActivity : AppCompatActivity() {
     lateinit var tvName: TextView
     lateinit var tvQuestionNumber: TextView
     lateinit var tvQuestion: TextView
@@ -19,16 +19,21 @@ class FourActivity : AppCompatActivity()  {
     lateinit var rbAnswer4: RadioButton
     lateinit var rgAnswers: RadioGroup
     lateinit var bSubmitNext: Button
+    lateinit var questions: ArrayList<Question>
     var count = 0
     var selected = 0
-    lateinit var questions:ArrayList<Question>
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fouractivity)
-initViews()
+        loadQuestions()
+        initViews()
     }
+
+
     private fun initViews() {
-        val data = intent.getStringExtra("Qummi")
+        var data = intent.getStringExtra("name")
         tvName = findViewById(R.id.tv_name)
         tvQuestion = findViewById(R.id.tv_question)
         tvQuestionNumber = findViewById(R.id.tv_question_number)
@@ -38,8 +43,11 @@ initViews()
         rbAnswer4 = findViewById(R.id.rb_answer4)
         bSubmitNext = findViewById(R.id.b_submit_next)
         tvName.text = data
+
         setQuestion(count)
-        bSubmitNext.setOnClickListener{
+
+        bSubmitNext.setOnClickListener {
+
             if (rbAnswer1.isChecked) {
                 selected = 1
             } else if (rbAnswer2.isChecked) {
@@ -50,42 +58,43 @@ initViews()
                 selected = 4
             }
 
-            if (selected == questions[count].to) {
+            if (selected == questions[count].togriJavob) {
                 count++
                 setQuestion(count)
             } else {
                 Toast.makeText(this, "Javob noto'g'ri", Toast.LENGTH_SHORT).show()
             }
-            count++
-            setQuestion(count)
-        }
 
+
+        }
 
     }
 
-
-
-
-
-    private fun setQuestion(i:Int) {
-        tvQuestionNumber.text = "Question ${i + 1} / ${questions.size}"
+    private fun setQuestion(i: Int) {
+        selected = 0
+        tvQuestionNumber.text = "Question ${i + 1}/${questions.size}"
         tvQuestion.text = questions[i].savol
-        rbAnswer1.text = questions[i].variant1
-        rbAnswer2.text = questions[i].variant2
-        rbAnswer3.text = questions[i].variant3
-        rbAnswer4.text = questions[i].variant4
+        rbAnswer1.text = questions[i].javob1
+        rbAnswer1.isChecked = false
+        rbAnswer2.text = questions[i].javob2
+        rbAnswer2.isChecked = false
+        rbAnswer3.text = questions[i].javob3
+        rbAnswer3.isChecked = false
+        rbAnswer4.text = questions[i].javob4
+        rbAnswer4.isChecked = false
     }
-          fun loadQuestions() {
-            questions = ArrayList()
-            questions.add(Question("Savol1", "javob1", "javob2", "javob3", "javob4", 2))
-            questions.add(Question("Savol2", "javob1", "javob2", "javob3", "javob4", 1))
-            questions.add(Question("Savol3", "javob1", "javob2", "javob3", "javob4", 4))
-            questions.add(Question("Savol4", "javob1", "javob2", "javob3", "javob4", 2))
-            questions.add(Question("Savol5", "javob1", "javob2", "javob3", "javob4", 3))
-            questions.add(Question("Savol6", "javob1", "javob2", "javob3", "javob4", 2))
-            questions.add(Question("Savol7", "javob1", "javob2", "javob3", "javob4", 4))
-            questions.add(Question("Savol8", "javob1", "javob2", "javob3", "javob4", 1))
-            questions.add(Question("Savol9", "javob1", "javob2", "javob3", "javob4", 2))
-            questions.add(Question("Savol10", "javob1", "javob2", "javob3", "javob4", 1))
-        }
+
+    private fun loadQuestions() {
+        questions = ArrayList()
+        questions.add(Question("Savol1", "javob1", "javob2", "javob3", "javob4",2))
+        questions.add(Question("Savol2", "javob1", "javob2", "javob3", "javob4", 1))
+        questions.add(Question("Savol3", "javob1", "javob2", "javob3", "javob4", 4))
+        questions.add(Question("Savol4", "javob1", "javob2", "javob3", "javob4", 2))
+        questions.add(Question("Savol5", "javob1", "javob2", "javob3", "javob4", 3))
+        questions.add(Question("Savol6", "javob1", "javob2", "javob3", "javob4", 2))
+        questions.add(Question("Savol7", "javob1", "javob2", "javob3", "javob4", 4))
+        questions.add(Question("Savol8", "javob1", "javob2", "javob3", "javob4", 1))
+        questions.add(Question("Savol9", "javob1", "javob2", "javob3", "javob4", 2))
+        questions.add(Question("Savol10", "javob1", "javob2", "javob3", "javob4", 1))
     }
+}

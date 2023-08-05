@@ -9,13 +9,16 @@
     tools:context="model.MainActivity">
 
     <ImageView
+        android:id="@+id/iv_volna"
         android:layout_width="match_parent"
+        android:layout_below="@id/iv_ddd"
         android:layout_height="wrap_content"
         android:src="@drawable/img_12" />
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="" />
+        android:id="@+id/iv_ddd"
+        android:layout_width="wrap_content"
+        android:layout_height="282dp"
+        android:src="@drawable/img" />
 
 </RelativeLayout>
