@@ -1,5 +1,6 @@
 package model
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.RadioButton
@@ -18,6 +19,7 @@ class TestActivity : AppCompatActivity() {
     lateinit var rbAnswer3: RadioButton
     lateinit var rbAnswer4: RadioButton
     lateinit var rgAnswers: RadioGroup
+     var resultat = ArrayList<Int>()
     lateinit var bSubmitNext: Button
     lateinit var questions: ArrayList<Question>
     var count = 0
@@ -61,14 +63,36 @@ class TestActivity : AppCompatActivity() {
                 selected = 4
 
             }
-            if (selected == questions[count].togriJavob) {
+            if (selected > 0) {
                 count++
-                setQuestion(count)
+                checkAnswer()
+                next()
+            }else {
+                Toast.makeText(this, "select one answer", Toast.LENGTH_SHORT).show()
             }
-
 
         }
 
+    }
+    private fun next (){
+        if (count == questions.size){
+
+
+        }else{
+            setQuestion(count)
+        }
+    }
+    private fun checkAnswer(){
+        if (selected==questions[count].togriJavob){
+            resultat.add(1)
+        }else{
+            resultat.add(0)
+        }
+    }
+    private fun openResultActivity(){
+        val intent = Intent(this,ItogActivity::class.java)
+        intent.putIntegerArrayListExtra("resultat",resultat)
+        startActivity(intent)
     }
 
     private fun setQuestion(i: Int) {

@@ -23,6 +23,8 @@ initView()
     }
 
     private fun initView (){
+
+        val data = intent.getIntegerArrayListExtra("resultat")
         ll_n1 = findViewById(R.id.ll_n1)
         ll_n2 = findViewById(R.id.ll_n2)
         ll_n3 = findViewById(R.id.ll_n3)
